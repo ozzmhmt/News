@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="co.appstorm:appstorm-data-0.0.5">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.android/build-cache/a154ce84e988e4e461cd783062221dfc7825c5be/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/a154ce84e988e4e461cd783062221dfc7825c5be/output/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/co.appstorm/appstorm-data/0.0.5/9d3c83e2a4e0767f528de2b40ac7f339529c0fa8/appstorm-data-0.0.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

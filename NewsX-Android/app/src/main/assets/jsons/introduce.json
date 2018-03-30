@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Welcome to News X",
+    "image": "https://source.unsplash.com/uVa5x4bsmog/600x800",
+    "about": "Your ultimate source for all kinds of news",
+    "isActive": true,
+    "isVisible": false
+  },
+  {
+    "name": "Smith Washington",
+    "image": "https://source.unsplash.com/buP5DXFAWTc/600x800",
+    "about": "Magna minim consequat qui non tempor et excepteur officia minim. Aute pariatur id adipisicing laborum irure enim ex magna commodo.",
+    "isActive": true,
+    "isVisible": false
+  },
+  {
+    "name": "Gates Hardin",
+    "image": "https://source.unsplash.com/SWiyd1T1sTk/600x800",
+    "about": "Sint labore velit consectetur fugiat Lorem anim sit pariatur qui consequat id.",
+    "isActive": false,
+    "isVisible": true
+  }
+]

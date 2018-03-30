@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="com.eightbitlab:supportrenderscriptblur-1.0.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.android/build-cache/82ed069da45971c63532306e63485cfdb17c6ea4/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/82ed069da45971c63532306e63485cfdb17c6ea4/output/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.eightbitlab/supportrenderscriptblur/1.0.0/f2a4df60de0aa5c33a9edb1cc2d961f122487c95/supportrenderscriptblur-1.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

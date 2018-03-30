@@ -1,0 +1,32 @@
+[
+  {
+    "_id": 1,
+    "name": "Wilson Wolfe",
+    "image": "http://placehold.it/32x32"
+  },
+  {
+    "_id": 2,
+    "name": "Marian Cruz",
+    "image": "http://placehold.it/32x32"
+  },
+  {
+    "_id": 3,
+    "name": "Diane Massey",
+    "image": "http://placehold.it/32x32"
+  },
+  {
+    "_id": 4,
+    "name": "Claudine Albert",
+    "image": "http://placehold.it/32x32"
+  },
+  {
+    "_id": 5,
+    "name": "Juliana Conley",
+    "image": "http://placehold.it/32x32"
+  },
+  {
+    "_id": 6,
+    "name": "Cleveland Boyer",
+    "image": "http://placehold.it/32x32"
+  }
+]

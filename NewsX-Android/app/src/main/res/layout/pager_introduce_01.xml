@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="co.appstorm.newsx.model.IIntroduce" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        style="@style/AppTheme.NoActionBar">
+
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/itemView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/spotlight_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:imageUrl="@{item.image}"
+                tools:src="@drawable/imagetest" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/intro_gradient" />
+            <TextView
+                android:id="@+id/intro_title"
+                fontPath="fonts/Montserrat-Light.ttf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_marginTopPercent="35%"
+                android:paddingBottom="40dp"
+                android:gravity="center"
+                android:text="@{item.name}"
+                android:textColor="@android:color/darker_gray"
+                android:textStyle="bold"
+                android:textSize="33sp"
+                tools:ignore="MissingPrefix"
+                tools:text="Welcome to NewsX" />
+            <TextView
+                android:id="@+id/intro_subtitle"
+                fontPath="fonts/Montserrat-Light.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/intro_title"
+                android:maxLines="5"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:paddingLeft="65dp"
+                android:paddingRight="65dp"
+                android:text="@{item.description}"
+                android:textColor="@color/textShortDescription"
+                android:textSize="23sp"
+                tools:ignore="MissingPrefix"
+                tools:text="Collect your favourite website and blogs" />
+
+        </android.support.percent.PercentRelativeLayout>
+    </RelativeLayout>
+</layout>

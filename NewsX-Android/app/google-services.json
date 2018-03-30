@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "412296520695",
+    "firebase_url": "https://newsx-44957.firebaseio.com",
+    "project_id": "newsx-44957",
+    "storage_bucket": "newsx-44957.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:412296520695:android:9be6ceffb6407f2f",
+        "android_client_info": {
+          "package_name": "co.appstorm.newsx"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "412296520695-0plph9sqjd4jc671uk16vi76mj56f2it.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFSiOuAH-Z_wE0F-X3VS-zgd6DhcBMUqw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:412296520695:android:a71dcce79cb1d9d4",
+        "android_client_info": {
+          "package_name": "co.appstorm.newsx.debug"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "412296520695-0plph9sqjd4jc671uk16vi76mj56f2it.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFSiOuAH-Z_wE0F-X3VS-zgd6DhcBMUqw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="co.appstorm.newsx.model.IArticle" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/itemView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="blocksDescendants"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/news_cover"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:scaleType="centerCrop"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+            app:imageUrl="@{item.coverImage}"
+            tools:maxHeight="300dp"
+            tools:scaleType="centerCrop"
+            tools:src="@drawable/imagetest"/>
+
+
+        <TextView
+            android:id="@+id/news_title"
+            fontPath="fonts/Catamaran-SemiBold.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/news_cover"
+            android:layout_toEndOf="@id/news_cover"
+            android:lineSpacingMultiplier="0.7"
+            android:layout_marginTop="0dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@{item.name}"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:maxLines="2"
+            tools:ignore="MissingPrefix"
+            tools:text="Yosemite Climber's Latest Faithful Choice" />
+
+        <TextView
+            android:id="@+id/news_headline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/news_title"
+            android:layout_toRightOf="@id/news_cover"
+            android:layout_toEndOf="@id/news_cover"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@{item.headline}"
+            android:textSize="12sp"
+            android:maxLines="2"
+            tools:ignore="MissingPrefix"
+            tools:text="Yosemite Climber's Latest Faithful Choice" />
+        <TextView
+            android:id="@+id/news_category"
+            fontPath="fonts/Catamaran-SemiBold.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/news_headline"
+            android:layout_toRightOf="@id/news_cover"
+            android:layout_toEndOf="@id/news_cover"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="@{item.categoryName}"
+            android:textAllCaps="true"
+            android:textColor="@color/colorAccent"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            tools:ignore="MissingPrefix"
+            tools:text="History" />
+        <TextView
+            android:id="@+id/news_date"
+            fontPath="fonts/Catamaran-SemiBold.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/news_headline"
+            android:layout_toRightOf="@id/news_category"
+            android:layout_toEndOf="@id/news_category"
+            android:textSize="12sp"
+            android:textColor="@android:color/darker_gray"
+            app:dateToList="@{item.publishedDate}"
+            tools:ignore="MissingPrefix"
+            tools:text="Dec 14, 2017 12:29 PM" />
+    </RelativeLayout>
+</layout>

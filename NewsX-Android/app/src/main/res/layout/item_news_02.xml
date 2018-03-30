@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="co.appstorm.newsx.model.IArticle" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/itemView"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="vertical"
+        tools:layout_height="250dp">
+
+        <ImageView
+            android:id="@+id/news_cover"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:maxHeight="300dp"
+            android:scaleType="centerCrop"
+            app:imageUrl="@{item.coverImage}"
+            tools:maxHeight="300dp"
+            tools:scaleType="centerCrop"
+            tools:src="@drawable/imagetest" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:src="@drawable/spotlight_gradient" />
+
+        <TextView
+            android:id="@+id/news_date"
+            fontPath="fonts/Catamaran-SemiBold.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="15dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textColor="@android:color/darker_gray"
+            app:dateToList="@{item.publishedDate}"
+            tools:ignore="MissingPrefix"
+            tools:text="Dec 14, 2017 12:29 PM" />
+
+        <TextView
+            android:id="@+id/news_title"
+            fontPath="fonts/Catamaran-SemiBold.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/news_date"
+            android:lineSpacingMultiplier="0.7"
+            android:paddingLeft="@dimen/category_side_padding"
+            android:paddingRight="@dimen/category_side_padding"
+            android:text="@{item.name}"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="Giant Pterosaurs Could Fly 10,000 Miles Nonstop" />
+
+        <TextView
+            android:id="@+id/news_category"
+            fontPath="fonts/Catamaran-SemiBold.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/news_title"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="@{item.categoryName}"
+            android:textAllCaps="true"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            tools:ignore="MissingPrefix"
+            tools:text="History" />
+    </RelativeLayout>
+</layout>

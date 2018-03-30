@@ -1,0 +1,100 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+apply plugin: 'com.android.application'
+apply plugin: 'realm-android'
+apply plugin: 'io.fabric'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        applicationId "co.appstorm.newsx"
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 3
+        versionName "1.0.1"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        renderscriptTargetApi 25 //must match target sdk and build tools, 23+
+        renderscriptSupportModeEnabled true
+
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+
+        debug {
+            applicationIdSuffix ".debug"
+        }
+    }
+    dataBinding {
+        enabled true
+    }
+
+    configurations.all {
+        resolutionStrategy.force 'com.google.code.findbugs:jsr305:3.0.2'
+    }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE-LGPL-2.1.txt'
+        exclude 'META-INF/LICENSE-LGPL-3.txt'
+        exclude 'META-INF/LICENSE-W3C-TEST'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
+    // Percent Layout for better styling
+    compile 'com.android.support:percent:25.3.1'
+    compile 'com.hannesdorfmann:adapterdelegates3:3.0.1'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    // BlurView to create blur effect
+    compile 'com.eightbitlab:supportrenderscriptblur:1.0.0'
+    compile 'uk.co.chrisjenx:calligraphy:2.2.0'
+    compile 'com.google.code.gson:gson:2.8.1'
+    // Firebase
+    compile 'com.google.firebase:firebase-ads:11.0.1'
+    compile 'com.google.firebase:firebase-core:11.0.1'
+    compile 'com.google.firebase:firebase-messaging:11.0.1'
+    compile 'com.google.firebase:firebase-core:11.0.1'
+
+
+    // Rx java
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+
+    compile('com.crashlytics.sdk.android:crashlytics:2.6.8@aar') {
+        transitive = true;
+    }
+    testCompile 'junit:junit:4.12'
+    debugCompile 'com.facebook.stetho:stetho:1.5.0'
+    compile 'co.appstorm:appstorm-data:0.0.5'
+
+}
+
+
+apply plugin: 'com.google.gms.google-services'

@@ -1,0 +1,65 @@
+[
+  {
+    "_id": "1",
+    "name": "Nation",
+    "image": "http://placehold.it/32x32",
+    "isActive": false,
+    "iVisible": false
+  },
+  {
+    "_id": "2",
+    "name": "World",
+    "image": "http://placehold.it/32x32",
+    "isActive": true,
+    "iVisible": true
+  },
+  {
+    "_id": "3",
+    "name": "Business",
+    "image": "http://placehold.it/32x32",
+    "isActive": false,
+    "iVisible": true
+  },
+  {
+    "_id": "4",
+    "name": "Sport",
+    "image": "http://placehold.it/32x32",
+    "isActive": false,
+    "iVisible": true
+  },
+  {
+    "_id": "5",
+    "name": "Life",
+    "image": "http://placehold.it/32x32",
+    "isActive": false,
+    "iVisible": true
+  },
+  {
+    "_id": "6",
+    "name": "Tech",
+    "image": "http://placehold.it/32x32",
+    "isActive": false,
+    "iVisible": true
+  },
+  {
+    "_id": "7",
+    "name": "Money",
+    "image": "http://placehold.it/32x32",
+    "isActive": false,
+    "iVisible": true
+  },
+  {
+    "_id": "8",
+    "name": "Travel",
+    "image": "http://placehold.it/32x32",
+    "isActive": false,
+    "iVisible": true
+  },
+  {
+    "_id": "9",
+    "name": "Weather",
+    "image": "http://placehold.it/32x32",
+    "isActive": false,
+    "iVisible": true
+  }
+]

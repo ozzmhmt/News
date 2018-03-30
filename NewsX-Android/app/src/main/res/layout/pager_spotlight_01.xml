@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="co.appstorm.newsx.model.SpotlightVM" />
+
+    </data>
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/itemView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/spotlight_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:imageUrl="@{item.image}"
+            tools:src="@drawable/imagetest" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/spotlight_gradient" />
+
+        <TextView
+            android:id="@+id/spotlight_category"
+            fontPath="fonts/Montserrat-SemiBold.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@{item.categoryName}"
+            android:textAllCaps="true"
+            android:textColor="@android:color/darker_gray"
+            android:textStyle="bold"
+            app:layout_marginTopPercent="19%"
+            tools:ignore="MissingPrefix"
+            tools:text="History" />
+
+        <TextView
+            android:id="@+id/spotlight_title"
+            style="@style/Spotlight.Title"
+            fontPath="fonts/Montserrat-SemiBold.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spotlight_category"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:text="@{item.name}"
+            android:maxLines="3"
+            android:ellipsize="end"
+            tools:ignore="MissingPrefix"
+            tools:text="How to Lose Weight and Fight Off Cancer at the Same Time" />
+
+        <TextView
+            android:id="@+id/spotlight_subtitle"
+            fontPath="fonts/Montserrat-Medium.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spotlight_title"
+            android:gravity="center"
+            android:paddingLeft="65dp"
+            android:paddingRight="65dp"
+            android:maxLines="9"
+            android:ellipsize="end"
+            android:text="@{item.description}"
+            android:textColor="@color/textShortDescription"
+            android:textSize="16sp"
+            tools:ignore="MissingPrefix"
+            tools:text="Eat less food, eat better food, eat like a caveman." />
+    </android.support.percent.PercentRelativeLayout>
+</layout>
